@@ -87,5 +87,5 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY_ID }}
           aws-region: us-east-1
       - name: upload asset to s3
-        run: aws s3 cp ${{ github.sha }}.zip s3:githubaction-tutorial/${{ github.sha }}.zip
+        run: aws s3 cp ${{ github.sha }}.zip s3://githubaction-tutorial/${{ github.sha }}.zip
         
